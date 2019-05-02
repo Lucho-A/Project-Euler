@@ -24,7 +24,7 @@ bool isPrime(llu number){
 	return TRUE;
 }
 
-void generate_vector_of_primes(Vector *v, llu n){
+llu generate_vector_of_primes(lu **v, llu n){
 	llu sievebound=(n-1)/2;
 	llu i=0,j=0;
 	llu crosslimit=(sqrt(n)-1)/2;
@@ -35,10 +35,18 @@ void generate_vector_of_primes(Vector *v, llu n){
 			for(j=2*i*(i+1);j<sievebound;j+=2*i+1) vAux[j]=TRUE;
 		}
 	}
-	vAdd(v,2,-1);
+	*v=NULL;
+	llu cont=1;
+	*v=malloc(sizeof(lu)*sievebound);
+	*v[0]=2;
 	for(llu i=1;i<sievebound;i++){
-		if(vAux[i]==FALSE) vAdd(v,2*i+1,-1);
+		if(vAux[i]==FALSE) {
+			*v[cont]=2*i+1;
+			cont++;
+			printf("Primo: %lu\n",*v[cont]);
+
+		}
 	}
 	free(vAux);
-	return;
+	return cont;
 }
