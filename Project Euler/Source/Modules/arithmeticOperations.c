@@ -1,0 +1,56 @@
+/*
+ * arithmeticOperations.c
+ *
+ * Created on: 12 ago. 2018
+ * Author: lucho
+*/
+
+#include "libEuler.h"
+
+void sum_big_numbers(char *num1, char *num2, char *result){
+	int carry=0, sum=0, i=0, len1=strlen(num1)-1, len2=strlen(num2)-1, n=0;
+	if(num1[len1]=='\n')len1--;
+	if(num2[len2]=='\n')len2--;
+	char aux[500]={'\0'};
+	while(len1>=0 || len2>=0){
+		if(len1>=0 && len2>=0){
+			n=num1[len1]-'0' + num2[len2]-'0';
+		}else{
+			len1<0 ? (n=num2[len2]-'0') : (n=num1[len1]-'0');
+		}
+		sum=n + carry;
+		carry=0;
+		aux[i]=sum%10+'0';
+		if(sum>9) carry=1;
+		i++;
+		len1--;
+		len2--;
+	}
+	if(carry==1) aux[i]='1';
+	int cont=0;
+	for(int i=strlen(aux)-1; i>=0;i--){
+		result[cont]=aux[i];
+		cont++;
+	}
+}
+
+ld factoriall(int n){
+	ld r=1;
+	for(int i=n;i>1;i--) r*=i;
+	return r;
+}
+
+void factorial(int num, char *result){
+	char strNum[200]={'\0'};
+	sprintf(result,"%d",num);
+	num--;
+	char aux[500]={'\0'};
+	do{
+		strcpy(aux,result);
+		for(int i=num;i>1;i--){
+			sprintf(strNum,"%d",i);
+			sum_big_numbers(result,aux,result);
+		}
+		num--;
+	}while(num!=1);
+}
