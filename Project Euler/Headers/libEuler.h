@@ -44,6 +44,7 @@
 //prime.c
     bool isPrime(llu number);
     llu generate_vector_of_primes(lu **v, llu n);
+    bool is_circular_prime(lu n);
 //factorization.c
     llu maxFactor(llu num);
 //commonFunctions.c
@@ -59,7 +60,7 @@
     void factorial(int num, char *result);
     ld factoriall(int n);
 //combiatoric.c
-    void lexi_permutate(char *s, llu n);
+    //void lexi_permutate(char *s, llu n);
     long double combinatory(llu m, llu n);
 //numberConversion.c
     void dec_to_binary(char *n, char *numBinary);

@@ -38,15 +38,26 @@ llu generate_vector_of_primes(lu **v, llu n){
 	*v=NULL;
 	llu cont=1;
 	*v=malloc(sizeof(lu)*sievebound);
-	*v[0]=2;
+	(*v)[0]=2;
 	for(llu i=1;i<sievebound;i++){
 		if(vAux[i]==FALSE) {
-			*v[cont]=2*i+1;
+			(*v)[cont]=2*i+1;
 			cont++;
-			printf("Primo: %lu\n",*v[cont]);
-
 		}
 	}
 	free(vAux);
 	return cont;
+}
+
+bool is_circular_prime(lu n){
+    char strPrime[10], strPrimeAux[10]="";
+	sprintf(strPrime,"%lu",n);
+	llu len=strlen(strPrime), cont=0, ind=1;
+	do{
+		for(int i=ind;i<len+ind;i++,cont++) strPrimeAux[cont]=strPrime[i%len]; //!!
+		if(isPrime(strtol(strPrimeAux,NULL,10))==FALSE) return FALSE;
+		ind++;
+		cont=0;
+	}while(strtol(strPrimeAux,NULL,10)!=n);
+	return TRUE;
 }
