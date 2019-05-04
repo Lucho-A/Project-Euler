@@ -17,43 +17,35 @@
 
 #include "libEuler.h"
 #define LIMIT 1000000001
-//static inline long double area(long double c, long double b){return (b/4)*sqrtl(4*c*c-b*b);}
-static inline long double area(long double c, long double b){return (b*sqrtl(c*c-(b*b/4)))/2;}
-static inline long double perim(long double c, long double b){return 2*c+b;}
+//static inline double area(double c, double b){return (b/4)*sqrtl(4*c*c-b*b);}
+static inline double area(double c, double b){return (b*sqrtl(c*c-(b*b/4)))/2;}
+static inline double perim(double c, double b){return 2*c+b;}
 
 void P0094(void){
     time_t tInit=clock();
-    long double sum=0, p=0, a=0, b=0;
+    double sum=0, p=0, a=0, b=0;
     int flag=0;
-    for(long double c=2;flag!=4;c++){
+    for(double c=2;flag!=4;c++){
     	//flag=0;
     	b=c+1;
     	a=area(c,b);
     	if(a==floorl(a)){
     		p=perim(c,b);
-    		printf("a=%Lf,c=%Lf, b=%Lf, p=%Lf\n",a,c,b,p);
+    		printf("a=%f,c=%f, b=%f, p=%f\n",a,c,b,p);
     		//getchar();
-    		if(p<LIMIT){
-    			sum+=p;
-    		}else{
-    			flag++;
-    		}
+    		(p<LIMIT)?sum+=p:flag++;
     	}
     	b=c-1;
     	a=area(c,b);
     	if(a==floorl(a)){
     		p=perim(c,b);
-    		printf("a=%Lf,c=%Lf, b=%Lf, p=%Lf\n",a,c,b,p);
+    		printf("a=%f,c=%f, b=%f, p=%f\n",a,c,b,p);
     		//getchar();
-    		if(p<LIMIT){
-    			sum+=p;
-    		}else{
-    			flag++;
-    		}
+    		(p<LIMIT)?sum+=p:flag++;
     	}
     }
     time_t tEnd=clock();
-    printf("Problem 94 - Result: %Lf. Elapsed Time: %.6f\n", sum,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
+    printf("Problem 94 - Result: %f. Elapsed Time: %.6f\n", sum,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
     return;
 }
 // 312530629458593024 no

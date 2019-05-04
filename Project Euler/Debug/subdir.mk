@@ -17,7 +17,7 @@ C_DEPS += \
 %.o: ../%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
-	gcc -I"/home/lucho/git/Project-Euler/Project Euler/Headers" -O0 -g3 -Wall -fPIC -c -fmessage-length=0 -lm -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	gcc -I"C:\Users\L\git\Project-Euler\Project Euler\Headers" -I"../$MINGW_HOME\lib\gcc\mingw32\4.6.x\include" -I"../$MINGW_HOME\include" -I"../$MINGW_HOME\lib\gcc\mingw32\4.6.x\include-fixed" -O0 -g3 -Wall -fPIC -c -fmessage-length=0 -lm -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
