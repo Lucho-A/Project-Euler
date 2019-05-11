@@ -42,7 +42,7 @@
 //palindrome.c
     bool is_palindrome(char *c);
 //prime.c
-    bool isPrime(llu number);
+    bool is_prime(llu number);
     llu generate_vector_of_primes(lu **v, llu n);
     bool is_circular_prime(lu n);
 //factorization.c
@@ -62,6 +62,7 @@
 //combiatoric.c
     //void lexi_permutate(char *s, llu n);
     long double combinatory(llu m, llu n);
+    bool is_permutation_of(lu n1, lu n2);
 //numberConversion.c
     void dec_to_binary(char *n, char *numBinary);
 #endif /* LIBEULER_H_ */

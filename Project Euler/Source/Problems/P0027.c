@@ -34,7 +34,7 @@ void P0027(void){
 			for(n = 0;flag==FALSE;n++){
 				result=n*n+a*n+b;
 				if(result>0){
-					if(isPrime(result)){
+					if(is_prime(result)){
 						consecutivePrimes++;
 					}else{
 						if(consecutivePrimes>=maxConsecutivePrimes){

@@ -35,7 +35,7 @@ void P0050(void){
 	for(int i=0;i<size-1;i++){
 		n=vPrimes[i];
 		for(int j=i+1;j<size && n<N;j++){
-			if(isPrime(n)){
+			if(is_prime(n)){
 				if(cont>maxCont){
 					maxN=n;
 					maxCont=cont;

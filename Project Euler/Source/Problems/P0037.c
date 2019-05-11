@@ -19,11 +19,11 @@ bool is_truncable(char *number){
 	char strAux[100]={'\0'};
 	for(int i=0;i<strlen(number);i++){
 		sprintf(strAux, "%.*s", (int) strlen(number), &number[i]);
-		if(isPrime(strtol(strAux,NULL,10))==FALSE) return FALSE;
+		if(is_prime(strtol(strAux,NULL,10))==FALSE) return FALSE;
 	}
 	for(int i=strlen(number);i>=0;i--){
 		sprintf(strAux, "%.*s", i, &number[0]);
-		if(isPrime(strtol(strAux,NULL,10))==FALSE) return FALSE;
+		if(is_prime(strtol(strAux,NULL,10))==FALSE) return FALSE;
 	}
 	return TRUE;
 }

@@ -12,7 +12,7 @@ llu maxFactor(llu num){
 		for(int i=2;i<=num;i++){
 			if(((num % i) == 0)){
 				num/=i;
-				if(isPrime(i)==0) max=i;
+				if(is_prime(i)==0) max=i;
 				end=FALSE;
 				break;
 			}

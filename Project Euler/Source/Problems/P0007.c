@@ -15,7 +15,7 @@ void P0007(void){
     time_t tInit=clock();
     int cont=1,i=3;
     while(TRUE){
-    	if(isPrime(i)) cont++;
+    	if(is_prime(i)) cont++;
     	if(cont==N) break;
     	i+=2;
     }
