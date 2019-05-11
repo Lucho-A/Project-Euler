@@ -48,6 +48,7 @@
 //factorization.c
     llu maxFactor(llu num);
 //commonFunctions.c
+    bool is_even(llu n);
     llu fibonacci_by_Lucas(llu n);
     llu fibonacci_qDigits(llu n);
     llu gcd(llu a, llu b);
