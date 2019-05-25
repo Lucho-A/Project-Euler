@@ -30,6 +30,26 @@ void permute(char *a, int l, int r){
 
  */
 
+bool is_permutation_of(lu n1, lu n2){
+	char strN1[10]="", strN2[10]="";
+	sprintf(strN1, "%lu", n1);
+	sprintf(strN2, "%lu", n2);
+	int len1=strlen(strN1), len2=strlen(strN2);
+	bool found=FALSE;
+	if(len1!=len2) return FALSE;
+	for(int i=0;i<len1;i++){
+		found=FALSE;
+		for(int j=0;j<len1;j++){
+			if(strN1[i]==strN2[j]){
+				found=TRUE;
+				break;
+			}
+		}
+		if(found==FALSE) return FALSE;
+	}
+	return TRUE;
+}
+
 long double combinatory(llu m, llu n){
 	long double num=1.0,deno=1.0, i=0.0;
 	for(i=m;i>n;i--) num*=i;

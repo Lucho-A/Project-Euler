@@ -7,7 +7,7 @@
 
 #include "libEuler.h"
 
-bool isPrime(llu number){
+bool is_prime(llu number){
 	if(number==1) return FALSE;
 	if(number<4) return TRUE;
 	if(number%2==0) return FALSE;
@@ -55,7 +55,7 @@ bool is_circular_prime(lu n){
 	llu len=strlen(strPrime), cont=0, ind=1;
 	do{
 		for(int i=ind;i<len+ind;i++,cont++) strPrimeAux[cont]=strPrime[i%len]; //!!
-		if(isPrime(strtol(strPrimeAux,NULL,10))==FALSE) return FALSE;
+		if(is_prime(strtol(strPrimeAux,NULL,10))==FALSE) return FALSE;
 		ind++;
 		cont=0;
 	}while(strtol(strPrimeAux,NULL,10)!=n);

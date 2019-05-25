@@ -20,15 +20,15 @@ reaching the ground. Give your answer rounded to four decimal places.
 #define V 20.0
 #define G 9.81
 #define H 100.0
-#define PRECITION 0.00000001
-#define STEP 0.0000001
+#define PRECITION 0.0001
+#define STEP 0.0001
 #define EQ1 (H+((V*V)/(2*G)))
 #define EQ2 (-G/(2*V*V))
 
 void P0137_v2(void){
     time_t tInit=clock();
-    long double y=0.1, volCilindre=0.0, vol=0.0, x=0.0, yAnt=0.0, dy=0.0;
-    long double step=STEP;
+    double y=0.1, volCilindre=0.0, vol=0.0, x=0.0, yAnt=0.0, dy=0.0;
+    double step=STEP;
     for(x=0.0; y>0.0;x+=step){
     	//printf("Last y: %.20LF, dy: %.20LF\n",y,dy);
     	//getchar();
@@ -40,6 +40,6 @@ void P0137_v2(void){
         (dy>PRECITION)?(step/=2):(step*=2);
     }
     time_t tEnd=clock();
-    printf("Result: %.20LF. Elapsed Time: %.6f\n", vol,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
+    printf("Result: %f. Elapsed Time: %.6f\n", vol,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
     return;
 }

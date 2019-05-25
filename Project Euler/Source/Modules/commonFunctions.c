@@ -4,6 +4,11 @@
 
 #include "libEuler.h"
 
+bool is_even(llu n){
+	if(n%2==0) return TRUE;
+	return FALSE;
+}
+
 llu fibonacci_by_Lucas(llu n){
 	return floor((1/sqrtl(5))*(powl((1+sqrtl(5))/2,n)+0.5));
 }

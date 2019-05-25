@@ -45,14 +45,18 @@ C_SRCS += \
 ../Source/Problems/P0043.c \
 ../Source/Problems/P0044.c \
 ../Source/Problems/P0045.c \
+../Source/Problems/P0046.c \
+../Source/Problems/P0049.c \
 ../Source/Problems/P0050.c \
 ../Source/Problems/P0066_TO_DO.c \
+../Source/Problems/P0070.c \
 ../Source/Problems/P0074.c \
 ../Source/Problems/P0075.c \
 ../Source/Problems/P0079.c \
 ../Source/Problems/P0085.c \
 ../Source/Problems/P0094_TO_DO.c \
 ../Source/Problems/P0104.c \
+../Source/Problems/P0120.c \
 ../Source/Problems/P0317_TODO.c \
 ../Source/Problems/P0317_v2.c \
 ../Source/Problems/P0622.c 
@@ -99,14 +103,18 @@ OBJS += \
 ./Source/Problems/P0043.o \
 ./Source/Problems/P0044.o \
 ./Source/Problems/P0045.o \
+./Source/Problems/P0046.o \
+./Source/Problems/P0049.o \
 ./Source/Problems/P0050.o \
 ./Source/Problems/P0066_TO_DO.o \
+./Source/Problems/P0070.o \
 ./Source/Problems/P0074.o \
 ./Source/Problems/P0075.o \
 ./Source/Problems/P0079.o \
 ./Source/Problems/P0085.o \
 ./Source/Problems/P0094_TO_DO.o \
 ./Source/Problems/P0104.o \
+./Source/Problems/P0120.o \
 ./Source/Problems/P0317_TODO.o \
 ./Source/Problems/P0317_v2.o \
 ./Source/Problems/P0622.o 
@@ -153,14 +161,18 @@ C_DEPS += \
 ./Source/Problems/P0043.d \
 ./Source/Problems/P0044.d \
 ./Source/Problems/P0045.d \
+./Source/Problems/P0046.d \
+./Source/Problems/P0049.d \
 ./Source/Problems/P0050.d \
 ./Source/Problems/P0066_TO_DO.d \
+./Source/Problems/P0070.d \
 ./Source/Problems/P0074.d \
 ./Source/Problems/P0075.d \
 ./Source/Problems/P0079.d \
 ./Source/Problems/P0085.d \
 ./Source/Problems/P0094_TO_DO.d \
 ./Source/Problems/P0104.d \
+./Source/Problems/P0120.d \
 ./Source/Problems/P0317_TODO.d \
 ./Source/Problems/P0317_v2.d \
 ./Source/Problems/P0622.d 
@@ -170,7 +182,7 @@ C_DEPS += \
 Source/Problems/%.o: ../Source/Problems/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
-	gcc -I"/home/lucho/git/Project-Euler/Project Euler/Headers" -O0 -g3 -Wall -fPIC -c -fmessage-length=0 -lm -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	gcc -I"/home/lucho/git/Project-Euler/Project Euler/Headers" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

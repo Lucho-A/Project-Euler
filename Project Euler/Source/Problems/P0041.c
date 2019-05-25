@@ -34,7 +34,7 @@ int isPandigital(long unsigned int n){
 void P0041(void){
 	time_t tInit=clock();
 	for(llu i=7654321;;i-=2){
-		if(isPandigital(i)==TRUE && isPrime(i)==TRUE){
+		if(isPandigital(i)==TRUE && is_prime(i)==TRUE){
 			time_t tEnd=clock();
 			printf("Problem 41 - Result: %llu. Elapsed Time: %.6f\n", i,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
 			return;
