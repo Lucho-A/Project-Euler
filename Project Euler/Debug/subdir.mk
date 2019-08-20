@@ -4,20 +4,20 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../main.c 
+../ProjectEulerMain.c 
 
 OBJS += \
-./main.o 
+./ProjectEulerMain.o 
 
 C_DEPS += \
-./main.d 
+./ProjectEulerMain.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
 %.o: ../%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
-	gcc -I"C:\Users\L\git\Project-Euler\Project Euler\Headers" -I"../$MINGW_HOME\lib\gcc\mingw32\4.6.x\include" -I"../$MINGW_HOME\include" -I"../$MINGW_HOME\lib\gcc\mingw32\4.6.x\include-fixed" -O0 -g3 -Wall -fPIC -c -fmessage-length=0 -lm -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	gcc -I"C:\Users\L\git\Project-Euler\Project Euler\Headers" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

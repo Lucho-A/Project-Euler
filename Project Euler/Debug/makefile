@@ -30,7 +30,7 @@ all: Project\ Euler
 Project\ Euler: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "Project Euler" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "Project Euler" $(OBJS) $(USER_OBJS) $(LIBS) -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 
