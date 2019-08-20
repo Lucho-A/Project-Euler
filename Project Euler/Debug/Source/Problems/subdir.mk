@@ -48,6 +48,7 @@ C_SRCS += \
 ../Source/Problems/P0046.c \
 ../Source/Problems/P0049.c \
 ../Source/Problems/P0050.c \
+../Source/Problems/P0058.c \
 ../Source/Problems/P0066_TO_DO.c \
 ../Source/Problems/P0070.c \
 ../Source/Problems/P0074.c \
@@ -57,6 +58,8 @@ C_SRCS += \
 ../Source/Problems/P0094_TO_DO.c \
 ../Source/Problems/P0104.c \
 ../Source/Problems/P0120.c \
+../Source/Problems/P0124.c \
+../Source/Problems/P0145.c \
 ../Source/Problems/P0317_TODO.c \
 ../Source/Problems/P0317_v2.c \
 ../Source/Problems/P0622.c 
@@ -106,6 +109,7 @@ OBJS += \
 ./Source/Problems/P0046.o \
 ./Source/Problems/P0049.o \
 ./Source/Problems/P0050.o \
+./Source/Problems/P0058.o \
 ./Source/Problems/P0066_TO_DO.o \
 ./Source/Problems/P0070.o \
 ./Source/Problems/P0074.o \
@@ -115,6 +119,8 @@ OBJS += \
 ./Source/Problems/P0094_TO_DO.o \
 ./Source/Problems/P0104.o \
 ./Source/Problems/P0120.o \
+./Source/Problems/P0124.o \
+./Source/Problems/P0145.o \
 ./Source/Problems/P0317_TODO.o \
 ./Source/Problems/P0317_v2.o \
 ./Source/Problems/P0622.o 
@@ -164,6 +170,7 @@ C_DEPS += \
 ./Source/Problems/P0046.d \
 ./Source/Problems/P0049.d \
 ./Source/Problems/P0050.d \
+./Source/Problems/P0058.d \
 ./Source/Problems/P0066_TO_DO.d \
 ./Source/Problems/P0070.d \
 ./Source/Problems/P0074.d \
@@ -173,6 +180,8 @@ C_DEPS += \
 ./Source/Problems/P0094_TO_DO.d \
 ./Source/Problems/P0104.d \
 ./Source/Problems/P0120.d \
+./Source/Problems/P0124.d \
+./Source/Problems/P0145.d \
 ./Source/Problems/P0317_TODO.d \
 ./Source/Problems/P0317_v2.d \
 ./Source/Problems/P0622.d 
