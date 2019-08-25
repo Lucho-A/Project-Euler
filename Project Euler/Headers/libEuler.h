@@ -43,7 +43,7 @@
     bool is_palindrome(char *c);
 //prime.c
     bool is_prime(llu number);
-    llu generate_vector_of_primes(lu **v, llu n);
+    llu generate_vector_of_primes(llu **v, llu n);
     bool is_circular_prime(lu n);
 //factorization.c
     llu maxFactor(llu num);
