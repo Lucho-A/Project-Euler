@@ -22,7 +22,7 @@ void P0123(void){
 		r=eq(n+1,vPrimes[n]);
 		//if(r>LIMIT){
 		if(n+1==3){
-			printf("Primo n°%I64u: %I64u --> %.0I64f\n",n+1,vPrimes[n], r);
+			printf("Primo n°%I64u: %I64u --> %.0I64\n",n+1,vPrimes[n], r);
 			time_t tEnd=clock();
 			printf("Problem P0123 - Result: %I64u. Elapsed Time: %.6f\n", n+1,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
 			return;
