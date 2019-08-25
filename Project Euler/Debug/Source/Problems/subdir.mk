@@ -58,10 +58,12 @@ C_SRCS += \
 ../Source/Problems/P0094_TO_DO.c \
 ../Source/Problems/P0104.c \
 ../Source/Problems/P0120.c \
+../Source/Problems/P0123.c \
 ../Source/Problems/P0124.c \
 ../Source/Problems/P0145.c \
 ../Source/Problems/P0317_TODO.c \
 ../Source/Problems/P0317_v2.c \
+../Source/Problems/P0381.c \
 ../Source/Problems/P0622.c 
 
 OBJS += \
@@ -119,10 +121,12 @@ OBJS += \
 ./Source/Problems/P0094_TO_DO.o \
 ./Source/Problems/P0104.o \
 ./Source/Problems/P0120.o \
+./Source/Problems/P0123.o \
 ./Source/Problems/P0124.o \
 ./Source/Problems/P0145.o \
 ./Source/Problems/P0317_TODO.o \
 ./Source/Problems/P0317_v2.o \
+./Source/Problems/P0381.o \
 ./Source/Problems/P0622.o 
 
 C_DEPS += \
@@ -180,10 +184,12 @@ C_DEPS += \
 ./Source/Problems/P0094_TO_DO.d \
 ./Source/Problems/P0104.d \
 ./Source/Problems/P0120.d \
+./Source/Problems/P0123.d \
 ./Source/Problems/P0124.d \
 ./Source/Problems/P0145.d \
 ./Source/Problems/P0317_TODO.d \
 ./Source/Problems/P0317_v2.d \
+./Source/Problems/P0381.d \
 ./Source/Problems/P0622.d 
 
 

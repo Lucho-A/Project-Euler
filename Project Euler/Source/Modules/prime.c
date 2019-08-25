@@ -24,7 +24,7 @@ bool is_prime(llu number){
 	return TRUE;
 }
 
-llu generate_vector_of_primes(lu **v, llu n){
+llu generate_vector_of_primes(llu **v, llu n){
 	llu sievebound=(n-1)/2;
 	llu i=0,j=0;
 	llu crosslimit=(sqrt(n)-1)/2;
