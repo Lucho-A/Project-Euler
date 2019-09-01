@@ -1,4 +1,4 @@
 Source/Modules/prime.o: ../Source/Modules/prime.c \
- C:\Users\L\git\Project-Euler\Project\ Euler\Headers/libEuler.h
+ /home/lucho/git/Project-Euler/Project\ Euler/Headers/libEuler.h
 
-C:\Users\L\git\Project-Euler\Project\ Euler\Headers/libEuler.h:
+/home/lucho/git/Project-Euler/Project\ Euler/Headers/libEuler.h:
