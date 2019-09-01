@@ -12,6 +12,7 @@ C_SRCS += \
 ../Source/Modules/palindrome.c \
 ../Source/Modules/pause.c \
 ../Source/Modules/prime.c \
+../Source/Modules/strings.c \
 ../Source/Modules/vector.c 
 
 OBJS += \
@@ -23,6 +24,7 @@ OBJS += \
 ./Source/Modules/palindrome.o \
 ./Source/Modules/pause.o \
 ./Source/Modules/prime.o \
+./Source/Modules/strings.o \
 ./Source/Modules/vector.o 
 
 C_DEPS += \
@@ -34,6 +36,7 @@ C_DEPS += \
 ./Source/Modules/palindrome.d \
 ./Source/Modules/pause.d \
 ./Source/Modules/prime.d \
+./Source/Modules/strings.d \
 ./Source/Modules/vector.d 
 
 
