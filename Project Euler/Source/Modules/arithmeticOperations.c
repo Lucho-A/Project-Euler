@@ -35,6 +35,21 @@ void sum_big_numbers(char *num1, char *num2, char *result){
 	}
 }
 
+void multip_big_numbers(char *n1, char *n2, char *result){
+	strcpy(result,n1);
+	for(int i=1;i<strtol(n2,NULL,10);i++) sum_big_numbers(result,n1,result);
+}
+
+void potencia(char *base, char *exp, char *result){
+	char multi[5000]="\0";
+	strcpy(multi, base);
+	strcpy(result, base);
+	for(int i=1;i<strtol(exp,NULL,10);i++){
+		multip_big_numbers(result,base,multi);
+		strcpy(result,multi);
+	}
+}
+
 ld factoriall(int n){
 	ld r=1;
 	for(int i=n;i>1;i--) r*=i;

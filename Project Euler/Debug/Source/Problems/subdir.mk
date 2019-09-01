@@ -65,14 +65,9 @@ C_SRCS += \
 ../Source/Problems/P0145.c \
 ../Source/Problems/P0317_TODO.c \
 ../Source/Problems/P0317_v2.c \
-<<<<<<< HEAD
-../Source/Problems/P0622.c 
-
-=======
 ../Source/Problems/P0381.c \
 ../Source/Problems/P0622.c 
 
->>>>>>> branch 'master' of https://github.com/Lucho-A/Project-Euler
 OBJS += \
 ./Source/Problems/P0001.o \
 ./Source/Problems/P0002.o \
@@ -135,14 +130,9 @@ OBJS += \
 ./Source/Problems/P0145.o \
 ./Source/Problems/P0317_TODO.o \
 ./Source/Problems/P0317_v2.o \
-<<<<<<< HEAD
-./Source/Problems/P0622.o 
-
-=======
 ./Source/Problems/P0381.o \
 ./Source/Problems/P0622.o 
 
->>>>>>> branch 'master' of https://github.com/Lucho-A/Project-Euler
 C_DEPS += \
 ./Source/Problems/P0001.d \
 ./Source/Problems/P0002.d \
@@ -205,20 +195,6 @@ C_DEPS += \
 ./Source/Problems/P0145.d \
 ./Source/Problems/P0317_TODO.d \
 ./Source/Problems/P0317_v2.d \
-<<<<<<< HEAD
-./Source/Problems/P0622.d 
-
-
-# Each subdirectory must supply rules for building sources it contributes
-Source/Problems/%.o: ../Source/Problems/%.c
-	@echo 'Building file: $<'
-	@echo 'Invoking: GCC C Compiler'
-	gcc -I"/home/lucho/git/Project-Euler/Project Euler/Headers" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
-	@echo 'Finished building: $<'
-	@echo ' '
-
-
-=======
 ./Source/Problems/P0381.d \
 ./Source/Problems/P0622.d 
 
@@ -232,4 +208,3 @@ Source/Problems/%.o: ../Source/Problems/%.c
 	@echo ' '
 
 
->>>>>>> branch 'master' of https://github.com/Lucho-A/Project-Euler

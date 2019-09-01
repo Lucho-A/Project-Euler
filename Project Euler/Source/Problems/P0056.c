@@ -11,19 +11,6 @@
 void vInit0(char *v){
 	for(int i=0;i<5000;i++) v[i]='\0';
 }
-void multip(char *n1, char *n2, char *result){
-	strcpy(result,n1);
-	for(int i=1;i<strtol(n2,NULL,10);i++) sum_big_numbers(result,n1,result);
-}
-void potencia(char *base, char *exp, char *result){
-	char multi[5000]="\0";
-	strcpy(multi, base);
-	strcpy(result, base);
-	for(int i=1;i<strtol(exp,NULL,10);i++){
-		multip(result,base,multi);
-		strcpy(result,multi);
-	}
-}
 
 void P0056(void){
 	time_t tInit=clock();
