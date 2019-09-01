@@ -58,6 +58,8 @@
     llu sum_of_proper_divisors(llu n);
 //aritmeticOperations.c
     void sum_big_numbers(char *num1, char *num2, char *result);
+    void multip_big_numbers(char *n1, char *n2, char *result);
+    void potencia(char *base, char *exp, char *result);
     void factorial(int num, char *result);
     ld factoriall(int n);
 //combiatoric.c

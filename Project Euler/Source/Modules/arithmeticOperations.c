@@ -6,12 +6,13 @@
 */
 
 #include "libEuler.h"
+#define LIMIT 10000
 
 void sum_big_numbers(char *num1, char *num2, char *result){
 	int carry=0, sum=0, i=0, len1=strlen(num1)-1, len2=strlen(num2)-1, n=0;
 	if(num1[len1]=='\n')len1--;
 	if(num2[len2]=='\n')len2--;
-	char aux[500]={'\0'};
+	char aux[10000]={'\0'};
 	while(len1>=0 || len2>=0){
 		if(len1>=0 && len2>=0){
 			n=num1[len1]-'0' + num2[len2]-'0';
@@ -34,6 +35,21 @@ void sum_big_numbers(char *num1, char *num2, char *result){
 	}
 }
 
+void multip_big_numbers(char *n1, char *n2, char *result){
+	strcpy(result,n1);
+	for(int i=1;i<strtol(n2,NULL,10);i++) sum_big_numbers(result,n1,result);
+}
+
+void potencia(char *base, char *exp, char *result){
+	char multi[5000]="\0";
+	strcpy(multi, base);
+	strcpy(result, base);
+	for(int i=1;i<strtol(exp,NULL,10);i++){
+		multip_big_numbers(result,base,multi);
+		strcpy(result,multi);
+	}
+}
+
 ld factoriall(int n){
 	ld r=1;
 	for(int i=n;i>1;i--) r*=i;
@@ -44,7 +60,7 @@ void factorial(int num, char *result){
 	char strNum[200]={'\0'};
 	sprintf(result,"%d",num);
 	num--;
-	char aux[500]={'\0'};
+	char aux[LIMIT]={'\0'};
 	do{
 		strcpy(aux,result);
 		for(int i=num;i>1;i--){

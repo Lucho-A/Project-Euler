@@ -48,6 +48,8 @@ C_SRCS += \
 ../Source/Problems/P0046.c \
 ../Source/Problems/P0049.c \
 ../Source/Problems/P0050.c \
+../Source/Problems/P0053.c \
+../Source/Problems/P0056.c \
 ../Source/Problems/P0058.c \
 ../Source/Problems/P0066_TO_DO.c \
 ../Source/Problems/P0070.c \
@@ -64,8 +66,13 @@ C_SRCS += \
 ../Source/Problems/P0317_TODO.c \
 ../Source/Problems/P0317_v2.c \
 ../Source/Problems/P0381.c \
+<<<<<<< HEAD
 ../Source/Problems/P0622.c 
 
+=======
+../Source/Problems/P0622.c 
+
+>>>>>>> branch 'master' of https://github.com/Lucho-A/Project-Euler
 OBJS += \
 ./Source/Problems/P0001.o \
 ./Source/Problems/P0002.o \
@@ -111,6 +118,8 @@ OBJS += \
 ./Source/Problems/P0046.o \
 ./Source/Problems/P0049.o \
 ./Source/Problems/P0050.o \
+./Source/Problems/P0053.o \
+./Source/Problems/P0056.o \
 ./Source/Problems/P0058.o \
 ./Source/Problems/P0066_TO_DO.o \
 ./Source/Problems/P0070.o \
@@ -127,8 +136,13 @@ OBJS += \
 ./Source/Problems/P0317_TODO.o \
 ./Source/Problems/P0317_v2.o \
 ./Source/Problems/P0381.o \
+<<<<<<< HEAD
 ./Source/Problems/P0622.o 
 
+=======
+./Source/Problems/P0622.o 
+
+>>>>>>> branch 'master' of https://github.com/Lucho-A/Project-Euler
 C_DEPS += \
 ./Source/Problems/P0001.d \
 ./Source/Problems/P0002.d \
@@ -174,6 +188,8 @@ C_DEPS += \
 ./Source/Problems/P0046.d \
 ./Source/Problems/P0049.d \
 ./Source/Problems/P0050.d \
+./Source/Problems/P0053.d \
+./Source/Problems/P0056.d \
 ./Source/Problems/P0058.d \
 ./Source/Problems/P0066_TO_DO.d \
 ./Source/Problems/P0070.d \
@@ -190,6 +206,7 @@ C_DEPS += \
 ./Source/Problems/P0317_TODO.d \
 ./Source/Problems/P0317_v2.d \
 ./Source/Problems/P0381.d \
+<<<<<<< HEAD
 ./Source/Problems/P0622.d 
 
 
@@ -202,3 +219,17 @@ Source/Problems/%.o: ../Source/Problems/%.c
 	@echo ' '
 
 
+=======
+./Source/Problems/P0622.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+Source/Problems/%.o: ../Source/Problems/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C Compiler'
+	gcc -I"C:\Users\L\git\Project-Euler\Project Euler\Headers" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+
+>>>>>>> branch 'master' of https://github.com/Lucho-A/Project-Euler
