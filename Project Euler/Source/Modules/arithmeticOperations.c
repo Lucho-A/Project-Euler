@@ -9,17 +9,22 @@
 #define LIMIT 10000
 
 void sum_big_numbers(char *num1, char *num2, char *result){
-	int carry=0, sum=0, i=0, len1=strlen(num1)-1, len2=strlen(num2)-1, n=0;
+	lu carry=0, sum=0, i=0, len1=strlen(num1)-1, len2=strlen(num2)-1, n=0;
 	if(num1[len1]=='\n')len1--;
 	if(num2[len2]=='\n')len2--;
-	char aux[10000]={'\0'};
+	char *aux=malloc(sizeof(char)*MAX_DIGIT);
+	if(aux==NULL){
+		printf("Error creando vector.");
+		EXIT_FAILURE;
+	}
+	for(lu in=0;in<MAX_DIGIT;in++) aux[in]='\0';
 	while(len1>=0 || len2>=0){
 		if(len1>=0 && len2>=0){
 			n=num1[len1]-'0' + num2[len2]-'0';
 		}else{
 			len1<0 ? (n=num2[len2]-'0') : (n=num1[len1]-'0');
 		}
-		sum=n + carry;
+		sum=n+carry;
 		carry=0;
 		aux[i]=sum%10+'0';
 		if(sum>9) carry=1;
@@ -28,11 +33,12 @@ void sum_big_numbers(char *num1, char *num2, char *result){
 		len2--;
 	}
 	if(carry==1) aux[i]='1';
-	int cont=0;
-	for(int i=strlen(aux)-1; i>=0;i--){
+	lu cont=0;
+	for(lu i=strlen(aux)-1; i>=0;i--){
 		result[cont]=aux[i];
 		cont++;
 	}
+	free(aux);
 }
 
 void multip_big_numbers(char *n1, char *n2, char *result){
@@ -41,13 +47,15 @@ void multip_big_numbers(char *n1, char *n2, char *result){
 }
 
 void potencia(char *base, char *exp, char *result){
-	char multi[5000]="\0";
+	char *multi=malloc(sizeof(char)*MAX_DIGIT);
+	for(lu i=0;i<MAX_DIGIT;i++) result[i]='\0';
 	strcpy(multi, base);
 	strcpy(result, base);
 	for(int i=1;i<strtol(exp,NULL,10);i++){
 		multip_big_numbers(result,base,multi);
 		strcpy(result,multi);
 	}
+	free(multi);
 }
 
 ld factoriall(int n){
