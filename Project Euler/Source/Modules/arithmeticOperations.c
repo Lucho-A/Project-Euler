@@ -6,12 +6,13 @@
 */
 
 #include "libEuler.h"
+#define LIMIT 10000
 
 void sum_big_numbers(char *num1, char *num2, char *result){
 	int carry=0, sum=0, i=0, len1=strlen(num1)-1, len2=strlen(num2)-1, n=0;
 	if(num1[len1]=='\n')len1--;
 	if(num2[len2]=='\n')len2--;
-	char aux[500]={'\0'};
+	char aux[10000]={'\0'};
 	while(len1>=0 || len2>=0){
 		if(len1>=0 && len2>=0){
 			n=num1[len1]-'0' + num2[len2]-'0';
@@ -44,7 +45,7 @@ void factorial(int num, char *result){
 	char strNum[200]={'\0'};
 	sprintf(result,"%d",num);
 	num--;
-	char aux[500]={'\0'};
+	char aux[LIMIT]={'\0'};
 	do{
 		strcpy(aux,result);
 		for(int i=num;i>1;i--){
