@@ -9,7 +9,7 @@
 #define LIMIT 10000
 
 void sum_big_numbers(char *num1, char *num2, char *result){
-	lu carry=0, sum=0, i=0, len1=strlen(num1)-1, len2=strlen(num2)-1, n=0;
+	int carry=0, sum=0, i=0, len1=strlen(num1)-1, len2=strlen(num2)-1, n=0;
 	if(num1[len1]=='\n')len1--;
 	if(num2[len2]=='\n')len2--;
 	char *aux=malloc(sizeof(char)*MAX_DIGIT);
@@ -34,7 +34,7 @@ void sum_big_numbers(char *num1, char *num2, char *result){
 	}
 	if(carry==1) aux[i]='1';
 	lu cont=0;
-	for(lu i=strlen(aux)-1; i>=0;i--){
+	for(int i=strlen(aux)-1; i>=0;i--){
 		result[cont]=aux[i];
 		cont++;
 	}
