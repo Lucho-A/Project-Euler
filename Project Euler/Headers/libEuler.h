@@ -20,7 +20,8 @@
 	#define MAX_DIGIT 2500000
 //typedef
 	typedef int bool;
-	typedef long double ld;
+	typedef long double lf;
+	typedef long int ld;
     typedef long unsigned int lu;
     typedef long long unsigned int llu;
 //pause.c
@@ -62,11 +63,13 @@
     void multip_big_numbers(char *n1, char *n2, char *result);
     void potencia(char *base, char *exp, char *result);
     void factorial(int num, char *result);
-    ld factoriall(int n);
+    lf factoriall(int n);
 //combiatoric.c
     //void lexi_permutate(char *s, llu n);
     long double combinatory(llu m, llu n);
     bool is_permutation_of(lu n1, lu n2);
 //numberConversion.c
     void dec_to_binary(char *n, char *numBinary);
+//strings.c
+    ld len(char *v);
 #endif /* LIBEULER_H_ */
