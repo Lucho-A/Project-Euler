@@ -49,6 +49,7 @@
     bool is_circular_prime(lu n);
 //factorization.c
     llu maxFactor(llu num);
+    llu number_of_positive_divisor(llu n);
 //commonFunctions.c
     bool is_even(llu n);
     llu fibonacci_by_Lucas(llu n);

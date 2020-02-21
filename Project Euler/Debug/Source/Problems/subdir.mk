@@ -65,6 +65,7 @@ C_SRCS += \
 ../Source/Problems/P0123.c \
 ../Source/Problems/P0124.c \
 ../Source/Problems/P0145.c \
+../Source/Problems/P0179.c \
 ../Source/Problems/P0205.c \
 ../Source/Problems/P0317_TODO.c \
 ../Source/Problems/P0317_v2.c \
@@ -133,6 +134,7 @@ OBJS += \
 ./Source/Problems/P0123.o \
 ./Source/Problems/P0124.o \
 ./Source/Problems/P0145.o \
+./Source/Problems/P0179.o \
 ./Source/Problems/P0205.o \
 ./Source/Problems/P0317_TODO.o \
 ./Source/Problems/P0317_v2.o \
@@ -201,6 +203,7 @@ C_DEPS += \
 ./Source/Problems/P0123.d \
 ./Source/Problems/P0124.d \
 ./Source/Problems/P0145.d \
+./Source/Problems/P0179.d \
 ./Source/Problems/P0205.d \
 ./Source/Problems/P0317_TODO.d \
 ./Source/Problems/P0317_v2.d \

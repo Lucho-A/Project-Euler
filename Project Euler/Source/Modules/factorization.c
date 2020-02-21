@@ -1,6 +1,6 @@
 /*
 
-*/
+ */
 
 #include "libEuler.h"
 
@@ -19,4 +19,23 @@ llu maxFactor(llu num){
 		}
 	}
 	return max;
+}
+
+llu number_of_positive_divisor(llu n){
+	llu *vPrimes=NULL;
+	generate_vector_of_primes(&vPrimes,n/2);
+	llu expCount=0, cantDiv=1;
+	for(llu j=0;n!=1;){
+		if(n%vPrimes[j]==0){
+			expCount++;
+			n/=vPrimes[j];
+			if(n==1) cantDiv*=(expCount+1);
+		}else{
+			cantDiv*=(expCount+1);
+			expCount=0;
+			j++;
+		}
+	}
+	free(vPrimes);
+	return cantDiv;
 }
