@@ -9,11 +9,7 @@
 #define LIMIT 10000
 
 void sum_big_numbers(char *num1, char *num2, char *result){
-<<<<<<< HEAD
-	int carry=0, sum=0, i=0, len1=strlen(num1)-1, len2=strlen(num2)-1, n=0;
-=======
 	long int carry=0, sum=0, i=0, len1= len(num1)-1, len2=len(num2)-1, n=0;
->>>>>>> branch 'master' of https://github.com/Lucho-A/Project-Euler
 	if(num1[len1]=='\n')len1--;
 	if(num2[len2]=='\n')len2--;
 	char *aux=malloc(sizeof(char)*MAX_DIGIT);
