@@ -3,7 +3,7 @@
  *
  * Created on: 12 ago. 2018
  * Author: lucho
-*/
+ */
 
 #include "libEuler.h"
 #define LIMIT 10000
@@ -38,20 +38,56 @@ void sum_big_numbers(char *num1, char *num2, char *result){
 }
 
 void multip_big_numbers(char *n1, char *n2, char *result){
-	strcpy(result,n1);
-	for(long int i=1;i<strtol(n2,NULL,10);i++) sum_big_numbers(result,n1,result);
+	//char mN[1000][1000]={{"\0"}};
+	ld lenN1=len(n1), lenN2=len(n2);
+	ld carry=0, ind=0, mult=0, i=0, j=0, cont=0, esp=0;
+	char **mN=(char **)malloc(lenN1 * lenN2 * sizeof(char*));
+	for(int i=0; i<lenN1 * lenN2;i++) mN[i] = (char *)malloc(lenN1 * lenN2 * sizeof(char));
+	for(int i=0;i<lenN1 * lenN2;i++){
+		for(int j=0;j<lenN1 * lenN2;j++)mN[i][j]='\0';
+		//mN[i][0]='\0';
+	}
+	for(i=lenN2-1;i>=0;i--){
+		for(int i=0;i<esp;i++) mN[ind][i]='0';
+		cont=esp;
+		for(j=lenN1-1;j>=0;j--){
+			mult=((n2[i])-'0') * ((n1[j])-'0') + carry;
+			carry=0;
+			if(mult<10){
+				mN[ind][cont]=mult+'0';
+			}else{
+				mN[ind][cont] = (mult%10)+'0';
+				carry=floor(mult/10);
+			}
+			cont++;
+		}
+		if(carry!=0){
+			if(carry<10){
+				mN[ind][cont]=carry +'0';
+			}else{
+				mN[ind][cont]=(carry%10) +'0';
+				mN[ind][cont+1]=floor(carry/10) +'0';
+			}
+			carry=0;
+		}
+		esp++;
+		ind++;
+	}
+	for(lu i=0;i<len(result);i++) result[i]='\0';
+	char strN1[1000]={'\0'};
+	for(int i=0;mN[i][0]!='\0';i++){
+		cont=0;
+		for(int j=len(mN[i])-1;j>=0;j--, cont++) strN1[cont]=mN[i][j];
+		mN[i][cont]='\0';
+		sum_big_numbers(strN1,result,result);
+	}
+	return;
 }
 
 void potencia(char *base, char *exp, char *result){
-	char *multi=malloc(sizeof(char)*MAX_DIGIT);
-	for(lu i=0;i<MAX_DIGIT;i++) result[i]='\0';
-	strcpy(multi, base);
+	for(ld i=0;i<MAX_DIGIT;i++) result[i]='\0';
 	strcpy(result, base);
-	for(int i=1;i<strtol(exp,NULL,10);i++){
-		multip_big_numbers(result,base,multi);
-		strcpy(result,multi);
-	}
-	free(multi);
+	for(ld i=1;i<strtol(exp,NULL,10);i++) multip_big_numbers(result,base,result);
 }
 
 lf factoriall(int n){
