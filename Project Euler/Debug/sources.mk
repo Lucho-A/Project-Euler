@@ -16,4 +16,5 @@ SUBDIRS := \
 . \
 Source/Modules \
 Source/Problems \
+Source/Problems/Versions \
 

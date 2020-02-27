@@ -13,13 +13,8 @@ C_SRCS += \
 ../Source/Modules/pause.c \
 ../Source/Modules/prime.c \
 ../Source/Modules/strings.c \
-<<<<<<< HEAD
 ../Source/Modules/vector.c 
 
-=======
-../Source/Modules/vector.c 
-
->>>>>>> branch 'master' of https://github.com/Lucho-A/Project-Euler
 OBJS += \
 ./Source/Modules/arithmeticOperations.o \
 ./Source/Modules/combinatoric.o \
@@ -30,13 +25,8 @@ OBJS += \
 ./Source/Modules/pause.o \
 ./Source/Modules/prime.o \
 ./Source/Modules/strings.o \
-<<<<<<< HEAD
 ./Source/Modules/vector.o 
 
-=======
-./Source/Modules/vector.o 
-
->>>>>>> branch 'master' of https://github.com/Lucho-A/Project-Euler
 C_DEPS += \
 ./Source/Modules/arithmeticOperations.d \
 ./Source/Modules/combinatoric.d \
@@ -47,7 +37,6 @@ C_DEPS += \
 ./Source/Modules/pause.d \
 ./Source/Modules/prime.d \
 ./Source/Modules/strings.d \
-<<<<<<< HEAD
 ./Source/Modules/vector.d 
 
 
@@ -60,17 +49,3 @@ Source/Modules/%.o: ../Source/Modules/%.c
 	@echo ' '
 
 
-=======
-./Source/Modules/vector.d 
-
-
-# Each subdirectory must supply rules for building sources it contributes
-Source/Modules/%.o: ../Source/Modules/%.c
-	@echo 'Building file: $<'
-	@echo 'Invoking: GCC C Compiler'
-	gcc -I"C:\Users\L\git\Project-Euler\Project Euler\Headers" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
-	@echo 'Finished building: $<'
-	@echo ' '
-
-
->>>>>>> branch 'master' of https://github.com/Lucho-A/Project-Euler

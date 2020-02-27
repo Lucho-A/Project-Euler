@@ -47,8 +47,9 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Testing|Headers|Modules|Problems" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="Source/Problems/Versions|Source/Versions|Versions|Testing|Headers|Modules|Problems" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Headers"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Source/Problems/Versions"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -96,10 +97,11 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Testing|Source/Problems|Problems|Source/Modules|Modules|Headers" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="Source/Versions|Versions|Testing|Source/Problems|Problems|Source/Modules|Modules|Headers" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Headers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Source/Modules"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Source/Problems"/>
+						<entry excluding="Versions" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Source/Problems"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Source/Problems/Versions"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
