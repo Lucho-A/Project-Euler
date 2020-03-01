@@ -22,7 +22,7 @@ void P0317(void){
 	}
 	vol*=(2*PI);
 	time_t tEnd=clock();
-	printf("Problem 317 - Result: %Lf. Elapsed Time: %.6f\n",vol ,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
+	printf("Problem 317 - Result: %.20Lg. Elapsed Time: %.6f\n",vol ,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
 	//Problem 317 - Result: 1856532.845528. Elapsed Time: 1327.568204
 	return;
 }
