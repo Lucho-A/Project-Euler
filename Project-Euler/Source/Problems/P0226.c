@@ -8,7 +8,7 @@
 */
 
 #include "libEuler.h"
-#define PREC 0.001
+#define PREC 0.0001
 #define LIMIT 30
 #define BLANCMANGE_CURVE(x) (int(pow(2,n)))
 #define CIRCLE(x,y) (sqrt((0.25*0.25)-((x-0.25)*(x-0.25)))+0.5)
