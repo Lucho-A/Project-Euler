@@ -8,7 +8,7 @@
 #include "libEuler.h"
 #define N 1000
 
-void P0053(void){
+void P0057(void){
 	time_t tInit=clock();
 	char p[N][N]={{"\0"}}, q[N][N]={{"\0"}};
 	lu sum=0;
@@ -24,6 +24,6 @@ void P0053(void){
 		if(strlen(p[i])>strlen(q[i])) sum++;
 	}
 	time_t tEnd=clock();
-	printf("Problem P0053 - Result: %lu. Elapsed Time: %.6f\n", sum,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
+	printf("Problem P0057 - Result: %lu. Elapsed Time: %.6f\n", sum,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
 	return;
 }
