@@ -67,7 +67,8 @@
     lf factoriall(int n);
 //combiatoric.c
     //void lexi_permutate(char *s, llu n);
-    long double combinatory(llu m, llu n);
+    double counting_combination(double n, double r);
+    ld combinatory(llu m, llu n);
     bool is_permutation_of(lu n1, lu n2);
 //numberConversion.c
     void dec_to_binary(char *n, char *numBinary);
