@@ -73,8 +73,9 @@ void multip_big_numbers(char *n1, char *n2, char *result){
 		esp++;
 		ind++;
 	}
-	for(lu i=0;i<len(result);i++) result[i]='\0';
-	char strN1[1000]={'\0'};
+	//for(lu i=0;i<len(result);i++) result[i]='\0';
+	strcpy(result,"0");
+	char strN1[MAX_DIGIT]={'\0'};
 	for(int i=0;mN[i][0]!='\0';i++){
 		cont=0;
 		for(int j=len(mN[i])-1;j>=0;j--, cont++) strN1[cont]=mN[i][j];

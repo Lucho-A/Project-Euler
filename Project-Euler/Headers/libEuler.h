@@ -17,7 +17,7 @@
     #define FALSE 0
     #define TRUE 1
 	#define PI 3.14159265358979323846264338327950288419716939937510
-	#define MAX_DIGIT 2500000
+	#define MAX_DIGIT 25000
 //typedef
 	typedef int bool;
 	typedef long double lf;
