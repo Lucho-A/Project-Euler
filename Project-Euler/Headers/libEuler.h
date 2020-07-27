@@ -17,7 +17,7 @@
     #define FALSE 0
     #define TRUE 1
 	#define PI 3.14159265358979323846264338327950288419716939937510
-	#define MAX_DIGIT 25000
+	#define MAX_DIGIT 1000
 //typedef
 	typedef int bool;
 	typedef long double lf;
@@ -62,7 +62,7 @@
 //aritmeticOperations.c
     void sum_big_numbers(char *num1, char *num2, char *result);
     void multip_big_numbers(char *n1, char *n2, char *result);
-    void potencia(char *base, char *exp, char *result);
+    void potencia(char *base, ld exp, char *result);
     void factorial(int num, char *result);
     lf factoriall(int n);
 //combiatoric.c

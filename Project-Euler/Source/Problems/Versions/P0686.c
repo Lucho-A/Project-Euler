@@ -7,32 +7,21 @@
 
 #include "libEuler.h"
 #define BASE "2"
-#define L "12"
+#define N 15
 
 void P0686(void){
 	time_t tInit=clock();
-	bool end=FALSE;
-	char s1[MAX_DIGIT]=L;
 	char r[MAX_DIGIT]="1";
-	long int n=1, exp=1;
-	char strExp[MAX_DIGIT]="1";
-	while(end==FALSE){
-		n++;
-		exp++;
-		sprintf(strExp,"%ld", exp);
-		//potencia(BASE, strExp, r);
-		/*for(long int i=0; i<strlen(s1);i++){
-			end=TRUE;
-			if(s1[i]!=r[i]){
-				end=FALSE;
-				break;
-			}
-		}*/
-		if(exp==3) break;
+	ld cont=0;
+	for(ld j=2;;j++){
+		for(int i=0;i<MAX_DIGIT;i++)r[i]='\0';
+		potencia(BASE, j, r);
+		if(r[0]=='1' && r[1]=='2' && r[2]=='3') cont++;
+		if(cont==N){
+			time_t tEnd=clock();
+			printf("Problem P0686 - Result: %ld (%s). Elapsed Time: %.6f\n", j, r,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
+			return;
+		}
 	}
-	time_t tEnd=clock();
-	potencia(BASE, strExp, s1);
-	printf("%s\n",s1);
-	printf("Problem P0686 - Result: %s. Elapsed Time: %.6f\n", r,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
 	return;
 }
