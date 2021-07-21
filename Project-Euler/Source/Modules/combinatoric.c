@@ -25,10 +25,16 @@ void permute(char *a, int l, int r){
 		}
 	}
 }
+*/
 
-
-
- */
+double counting_combination(double n, double r){
+	double i=0.0,result=1.0;
+	for(i=1.0;i<=r;i++){
+		result*=n/i;
+		n--;
+	}
+	return result;
+}
 
 bool is_permutation_of(lu n1, lu n2){
 	char strN1[10]="", strN2[10]="";
@@ -50,7 +56,7 @@ bool is_permutation_of(lu n1, lu n2){
 	return TRUE;
 }
 
-long double combinatory(llu m, llu n){
+ld combinatory(llu m, llu n){
 	long double num=1.0,deno=1.0, i=0.0;
 	for(i=m;i>n;i--) num*=i;
 	for(i=m-n;i>1;i--) deno*=i;
@@ -93,4 +99,4 @@ void lexi_permutate(char *s, llu n){
 	}
 	return;
 }
-*/
+ */

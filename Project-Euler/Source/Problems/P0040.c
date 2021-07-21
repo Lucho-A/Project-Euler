@@ -27,7 +27,8 @@ void P0040(void){
     for(llu i=0;i<200000;i++) fprintf(f,"%llu",i);
     fclose(f);
     f=fopen("Resources/P0040/P0040.tmp","r");
-    getline(&n, &len,f);
+    //comentario por compatibilidad w32
+    //getline(&n, &len,f);
     fclose(f);
     result=(n[10]-'0') * (n[100]-'0') * (n[1000]-'0') * (n[10000]-'0') * (n[100000]-'0') * (n[1000000]-'0');
 	time_t tEnd=clock();

@@ -119,7 +119,8 @@ void P0013(void){
     char result[100]="0";
     fp = fopen("Resources/P0013/number.txt", "r");
     if (fp == NULL) exit(EXIT_FAILURE);
-    while ((read = getline(&line, &lenLine, fp)) != -1) sum_big_numbers(result,line,result);
+    //comentario por compatibilidad w32
+    //while ((read = getline(&line, &lenLine, fp)) != -1) sum_big_numbers(result,line,result);
     fclose(fp);
     if (line) free(line);
     time_t tEnd=clock();
