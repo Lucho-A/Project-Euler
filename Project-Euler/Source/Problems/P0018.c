@@ -34,6 +34,7 @@ void P0018(void){
 		printf("\n");
     }
     time_t tEnd=clock();
+
     printf("Problem 18 - Result: %d. Elapsed Time: %.6f\n", max,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
     return;
 }
