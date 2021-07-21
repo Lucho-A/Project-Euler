@@ -15,7 +15,6 @@ void P0018(void){
     		{8,5,9,3}
     };
     int max=0, suma=0;
-
     int fila=0,col=0, colAux=0, cont=0;
     for(col=NIVELES-1;col>=0;col--){
     	suma=matriz[NIVELES-1][col];
