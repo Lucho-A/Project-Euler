@@ -6,7 +6,7 @@
 #include "libEuler.h"
 #define ROWS 5
 
-void P0081(void){
+void P0081v1(void){
 	time_t tInit=clock();
 	int m[ROWS][ROWS]={
 			{131,673,234,103,18},
