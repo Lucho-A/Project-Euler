@@ -65,7 +65,7 @@ int main(void){
 	//TODO P0081();
 	//P0085();
 	//TODO P0094();
-	P0097();
+	//P0097();
 	//TODO P0102();
 	//P0104();
 	//P0120();
@@ -78,6 +78,6 @@ int main(void){
 	//P0205();
 	//P0381();
 	//P0622();
-	//TODO P0686();
+	P0686();
 	return EXIT_SUCCESS;
 }
