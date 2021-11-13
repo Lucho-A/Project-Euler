@@ -3,11 +3,11 @@
 	Problem 622
 149516, 400002, 1064626, 1400908, 1641256
 	28 abr. 2019
- */
+*/
 
 #include "libEuler.h"
 #define S(N) 60
-#define N 100
+#define N 52
 
 typedef struct Card{
 	struct Card *next;
