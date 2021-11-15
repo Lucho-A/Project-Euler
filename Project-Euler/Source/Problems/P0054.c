@@ -6,7 +6,7 @@
 	L.
 
 	11 Nov. 2021-23:38:01
- */
+*/
 
 #include "libEuler.h"
 

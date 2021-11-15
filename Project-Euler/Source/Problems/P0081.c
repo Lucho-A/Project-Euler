@@ -1,71 +1,44 @@
 /*
 	P0018.c
-	20 jul. 2021
- */
+
+	L.
+*/
 
 #include "libEuler.h"
-#define ROWS 5
 
-void P0081v1(void){
+#define ROWS 80
+
+void P0081(void){
 	time_t tInit=clock();
-	int m[ROWS][ROWS]={
-			{131,673,234,103,18},
-			{201,96,342,965,150},
-			{630,803,746,422,111},
-			{537,699,497,121,956},
-			{805,732,524,37,331}
-	};
-	int row=0,col=0, sum=0;
-	int r1[ROWS][ROWS]={{0}};
-	int r2[ROWS][ROWS]={{0}};
-	r1[0][0]=1;
-	r2[0][0]=1;
-	r1[ROWS-1][ROWS-1]=1;
-	r2[ROWS-1][ROWS-1]=1;
-	while(row<ROWS-1 || col<ROWS-1){
-		r1[row][col]=1;
-		if((row==ROWS-1 || (m[row][col+1] < m[row+1][col])) && col<ROWS-1){
-			col++;
-		}else{
+	long int m[ROWS][ROWS]={{0}};
+	FILE *fp=NULL;
+	long int n=0;
+	int contPos=0, row=0;
+	if((fp=fopen("Resources/P0081/p081_matrix.txt", "r")) == NULL) exit(EXIT_FAILURE);
+	while(fscanf(fp,"%ld,",&n)!=EOF){
+		if(contPos==ROWS){
+			contPos=0;
 			row++;
 		}
-	}
-	printf("\n");
-	row=ROWS-1;
-	col=ROWS-1;
-	while(row>0 || col>0){
-		r2[row][col]=1;
-		if((row==0 || (m[row][col-1] < m[row-1][col])) && col>0){
-			col--;
-		}else{
-			row--;
-		}
+		m[row][contPos]=n;
+		contPos++;
 	}
 	for(int i=0;i<ROWS;i++){
 		for(int j=0;j<ROWS;j++){
-			if(!(r1[i][j]==0 && r2[i][j]==0)){
-				if(r1[i][j]==r2[i][j]==1){
-					sum+=m[i][j];
+			if(i==0 && j==0) continue;
+			if(i==0){
+				m[i][j]+=m[i][j-1];
+			}else{
+				if(j==0){
+					m[i][j]+=m[i-1][j];
 				}else{
-					if((r1[i][j]<r2[i+1][j-1])){
-						sum+=m[i][j];
-					}else{
-						sum+=m[i+1][j-1];
-					}
-					r1[i][j]=0;
-					r2[i][j]=0;
-					r1[i+1][j-1]=0;
-					r2[i+1][j-1]=0;
-					//printf("(%d,%d)(%d,%d)(%d) ",i,j,r1[i][j],r2[i][j],m[i][j]);
+					(m[i][j-1]< m[i-1][j])?(m[i][j]+=m[i][j-1]):(m[i][j]+=m[i-1][j]);
 				}
-				printf("\n");
-				printf("%d",sum);
 			}
 		}
 	}
-	printf("\n");
 	time_t tEnd=clock();
-	printf("Problem 18 - Result: %d. Elapsed Time: %.6f secs\n", sum,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
+	printf("Problem 81 - Result: %ld. Elapsed Time: %.6f secs\n", m[ROWS-1][ROWS-1],(double) (tEnd-tInit)/CLOCKS_PER_SEC);
 	return;
 }
 
