@@ -20,14 +20,11 @@ int tiradaColin(void){
 	return sumaColin;
 }
 
-void P0205(void){
+void P0205v2(void){
 	time_t tInit=clock();
 	srand(time(NULL));
-	double victoriasPeter=0;
-	double victoriasColin=0;
-	double empates=0;
-	int resultPeter=0;
-	int resultColin=0;
+	double victoriasPeter=0, victoriasColin=0, empates=0;
+	int resultPeter=0, resultColin=0;
 	for(double i= 0; i<INTENTOS;i++){
 		resultPeter=tiradaPeter();
 		resultColin=tiradaColin();
@@ -41,10 +38,10 @@ void P0205(void){
 		}
 		empates++;
 	}
-	printf("Probabilidad Peter: %.8lf\n", victoriasPeter/INTENTOS);
-	printf("Probabilidad Colin: %.8lf\n", victoriasColin/INTENTOS);
-	printf("Probabilidad Empate: %.8lf\n", empates/INTENTOS);
+	//printf("Probabilidad Peter: %.8lf\n", victoriasPeter); // 5731752-21,
+	//printf("Probabilidad Colin: %.8lf\n", victoriasColin);
+	//printf("Probabilidad Empate: %.8lf\n", empates);
 	time_t tEnd=clock();
-	printf("Problem P0205 - Result: %f. Elapsed Time: %.6f\n", 0.0,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
+	printf("Problem P0205 - Result: %f. Elapsed Time: 0.%lf\n", victoriasPeter,(double) (tEnd-tInit)/CLOCKS_PER_SEC);
 	return;
 }

@@ -15,7 +15,8 @@ void P0185(void){
 	int n[DIGITS]={-1};
 	int valuesExcl[DIGITS][10]={{0}};
 
-    int comp[CANT_COMP][DIGITS]={{5,6,1,6,1,8,5,6,5,0,5,1,8,2,9,3},
+    int comp[CANT_COMP][DIGITS]={
+    					{5,6,1,6,1,8,5,6,5,0,5,1,8,2,9,3},
     					{3,8,4,7,4,3,9,6,4,7,2,9,3,0,4,7},
 						{5,8,5,5,4,6,2,9,4,0,8,1,0,5,8,7},
 						{9,7,4,2,8,5,5,5,0,7,0,6,8,3,5,3},
@@ -63,6 +64,7 @@ void P0185(void){
 		for(int numComp=0;numComp<CANT_COMP;numComp++){
 			end=TRUE;
 			for(int digit=0;digit<DIGITS;digit++){
+				//if(n[digit]==comp[numComp][digit]) cont++;
 				if(n[digit]==comp[numComp][digit]) cont++;
 			}
 			//if(cont!=compR[numComp]){
