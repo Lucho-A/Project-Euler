@@ -29,7 +29,8 @@ Score evaluate_hand(Card *p);
 
 void P0054(void){
 	struct timespec tInit, tEnd;
-	clock_gettime(CLOCK_MONOTONIC_RAW, &tInit);
+	// Ver compatibilidad con W64
+	//clock_gettime(CLOCK_MONOTONIC_RAW, &tInit);
 	FILE *fp=NULL;
 	Card j1[5];
 	Card j2[5];
@@ -81,7 +82,7 @@ void P0054(void){
 		}
 	}
 	fclose(fp);
-	clock_gettime(CLOCK_MONOTONIC_RAW, &tEnd);
+	//clock_gettime(CLOCK_MONOTONIC_RAW, &tEnd);
 	double elapsedTime=(tEnd.tv_nsec - tInit.tv_nsec) / 1000000000.0 + (tEnd.tv_sec  - tInit.tv_sec);
 	printf("Problem P0054 - Result: %d. Elapsed Time: %.6f secs\n", contW1,elapsedTime);
 	return;
