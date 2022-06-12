@@ -10,7 +10,7 @@
 #include "libEuler.h"
 #define N 10000000
 
-void P0179(void){
+void P0179v1(void){
 	time_t tInit=clock();
 	llu *vPrimes=NULL;
 	llu count=1, cantDiv=1, cantDivAnt=0, contTotal=1,n=0,j=0;
